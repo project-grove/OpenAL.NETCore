@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 using NativeLibraryLoader;
+using OpenAL.Internal;
 
 namespace OpenAL
 {
@@ -135,6 +136,7 @@ int param,
 int size,
 int[] values
 ) => s_alcGetIntegerv_IntPtr_int_int_int___t(device, param, size, values);
-        private static T __LoadFunction<T>(string name) => throw new NotImplementedException();	}
+        private static T __LoadFunction<T>(string name) => Loader.OpenAL.LoadFunction<T>(name);
+    }
 }
 

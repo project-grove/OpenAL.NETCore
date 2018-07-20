@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 using NativeLibraryLoader;
+using OpenAL.Internal;
 
 namespace OpenAL
 {
@@ -48,6 +49,7 @@ int channels,
 int type,
 IntPtr data
 ) => s_alGetBufferSamplesSOFT_uint_int_int_int_int_IntPtr_t(buffer, offset, samples, channels, type, data);
-        private static T __LoadFunction<T>(string name) => throw new NotImplementedException();	}
+        private static T __LoadFunction<T>(string name) => Loader.OpenAL.LoadFunction<T>(name);
+    }
 }
 

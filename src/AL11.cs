@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 using NativeLibraryLoader;
+using OpenAL.Internal;
 
 namespace OpenAL
 {
@@ -23,7 +24,7 @@ namespace OpenAL
         private static alSpeedOfSound_float_t s_alSpeedOfSound_float_t = __LoadFunction<alSpeedOfSound_float_t>("alSpeedOfSound");
 
         public static void alSpeedOfSound(float value) => s_alSpeedOfSound_float_t(value);
-        private static T __LoadFunction<T>(string name) => throw new NotImplementedException();
+        private static T __LoadFunction<T>(string name) => Loader.OpenAL.LoadFunction<T>(name);
     }
 }
 

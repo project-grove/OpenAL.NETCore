@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 using NativeLibraryLoader;
+using OpenAL.Internal;
 
 namespace OpenAL
 {
@@ -91,6 +92,7 @@ IntPtr device,
 IntPtr buffer,
 int samples
 ) => s_alcCaptureSamples_IntPtr_IntPtr_int_t(device, buffer, samples);
-        private static T __LoadFunction<T>(string name) => throw new NotImplementedException();	}
+        private static T __LoadFunction<T>(string name) => Loader.OpenAL.LoadFunction<T>(name);
+    }
 }
 

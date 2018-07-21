@@ -1,12 +1,45 @@
+#region License
+/* OpenAL# - C# Wrapper for OpenAL Soft
+ *
+ * Copyright (c) 2014-2015 Ethan Lee.
+ *
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from
+ * the use of this software.
+ *
+ * Permission is granted to anyone to use this software for any purpose,
+ * including commercial applications, and to alter it and redistribute it
+ * freely, subject to the following restrictions:
+ *
+ * 1. The origin of this software must not be misrepresented; you must not
+ * claim that you wrote the original software. If you use this software in a
+ * product, an acknowledgment in the product documentation would be
+ * appreciated but is not required.
+ *
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ *
+ * 3. This notice may not be removed or altered from any source distribution.
+ *
+ * Ethan "flibitijibibo" Lee <flibitijibibo@flibitijibibo.com>
+ *
+ */
+#endregion
+
+#region Using Statements
 using System;
 using System.Runtime.InteropServices;
 using NativeLibraryLoader;
 using OpenAL.Internal;
+#endregion
+endregion
 
 namespace OpenAL
 {
     public static class AL10
     {
+        private const string nativeLibName = "soft_oal.dll";
+
         /* typedef int ALenum; */
         public const int AL_NONE = 0x0000;
         public const int AL_FALSE = 0x0000;
@@ -114,9 +147,9 @@ namespace OpenAL
 
         private delegate IntPtr INTERNAL_alGetString_int_t(int param);
 
-        private static INTERNAL_alGetString_int_t s_INTERNAL_alGetString_int_t = __LoadFunction<INTERNAL_alGetString_int_t>("INTERNAL_alGetString");
+        private static INTERNAL_alGetString_int_t s_INTERNAL_alGetString_int_t = __LoadFunction<INTERNAL_alGetString_int_t>("alGetString");
 
-        public static IntPtr INTERNAL_alGetString(int param) => s_INTERNAL_alGetString_int_t(param);
+        private static IntPtr INTERNAL_alGetString(int param) => s_INTERNAL_alGetString_int_t(param);
 
         private delegate void alGetBooleanv_int_bool___t(int param, bool[] values);
 

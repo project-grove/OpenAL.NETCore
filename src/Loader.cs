@@ -24,12 +24,13 @@ namespace OpenAL.Internal
             string[] names = null;
             if (IsOSPlatform(OSPlatform.Windows)) {
                 names = new [] { "soft_oal.dll" };
-            } else if (IsOSPlatform(OSPlatform.Linux)) {
-                names = new [] { "libopenal.so" };
             } else if (IsOSPlatform(OSPlatform.OSX)) {
                 names = new [] { "libopenal.dylib" };
             } else {
-                throw new Exception("This platform is not supported");
+                names = new [] { 
+                    "libopenal.so",
+                    "libopenal.so.1"
+                };
             }
             return new NativeLibrary(names);
         }

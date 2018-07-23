@@ -27,6 +27,9 @@ namespace OpenAL
         public const int ALC_DEVICE_SPECIFIER = 0x1005;
         public const int ALC_EXTENSIONS = 0x1006;
 
+        public const int ALC_MAJOR_VERSION = 4096;
+        public const int ALC_MINOR_VERSION = 4097;
+
         private delegate IntPtr alcCreateContext_IntPtr_int___t(
                     IntPtr device,
                     int[] attrList

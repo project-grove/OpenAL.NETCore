@@ -17,7 +17,7 @@ namespace OpenAL
         public const int AL_LINEAR_DISTANCE = 0xD003;
         public const int AL_LINEAR_DISTANCE_CLAMPED = 0xD004;
         public const int AL_EXPONENT_DISTANCE = 0xD005;
-        public const int AL_EXPONENT_DISTANCE_CLAMED = 0xD006;
+        public const int AL_EXPONENT_DISTANCE_CLAMPED = 0xD006;
 
         private delegate void alSpeedOfSound_float_t(float value);
 

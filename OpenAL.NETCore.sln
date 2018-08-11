@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenALSoft.NETCore", "src\OpenALSoft.NETCore.csproj", "{A1B35053-42C3-4F47-899E-EED9C9963359}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAL.NETCore", "src\OpenAL.NETCore.csproj", "{A1B35053-42C3-4F47-899E-EED9C9963359}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deps", "deps", "{7C97ACE6-68B9-4C9F-8FCB-D0C3B7726440}"
 EndProject

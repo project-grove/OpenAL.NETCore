@@ -23,7 +23,10 @@ namespace OpenAL.Internal
         {
             string[] names = null;
             if (IsOSPlatform(OSPlatform.Windows)) {
-                names = new [] { "soft_oal.dll" };
+                names = new [] {
+                    "openal32.dll",
+                    "soft_oal.dll"
+                };
             } else if (IsOSPlatform(OSPlatform.OSX)) {
                 names = new [] { "libopenal.dylib" };
             } else {

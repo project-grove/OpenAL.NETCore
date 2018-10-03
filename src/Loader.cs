@@ -28,7 +28,7 @@ namespace OpenAL.Internal
                     "soft_oal.dll"
                 };
             } else if (IsOSPlatform(OSPlatform.OSX)) {
-                names = new [] { "libopenal.dylib" };
+                names = new [] { "libopenal.dylib", "openal.dylib" };
             } else {
                 names = new [] { 
                     "libopenal.so",

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\deps\nativelibraryloader\NativeLibraryLoader\NativeLibraryLoader.csproj" />
+    <PackageReference Include="NativeLibraryLoader" Version="1.0.11" />
   </ItemGroup>
 
   <PropertyGroup>
